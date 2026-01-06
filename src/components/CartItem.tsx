@@ -1,5 +1,6 @@
 'use client';
 import React from "react";
+import Image from "next/image";
 import { Button } from "antd";
 import { PlusOutlined, MinusOutlined, DeleteOutlined } from "@ant-design/icons";
 import { CartItem as CartItemType, useCartStore } from "@/store/cartStore";
@@ -31,10 +32,13 @@ export default function CartItem({ item }: CartItemProps) {
 
     return (
         <div className="flex gap-4 p-4 border border-gray-200 rounded-lg bg-white shadow-sm">
-            <img 
-                src={item.image} 
+            <Image
+                src={item.image}
                 alt={item.name}
+                width={96}
+                height={96}
                 className="w-24 h-24 object-cover rounded"
+                unoptimized
             />
             
 

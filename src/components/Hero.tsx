@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -12,7 +13,7 @@ export default function Hero() {
             </h1>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
               Explore a world of high-quality products designed to fit your lifestyle. 
-              Whether you're upgrading your essentials or discovering something new, we 
+              Whether you&apos;re upgrading your essentials or discovering something new, we 
               bring you trusted brands, seamless shopping, and fast, reliable delivery 
               all in one place.
             </p>
@@ -21,10 +22,12 @@ export default function Hero() {
           {/* Right Image */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1524508762098-fd966ffb6ef9?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dfit=crop"
                 alt="Shopping Experience"
                 className="w-full h-[400px] md:h-[500px] object-cover"
+                fill
+                unoptimized
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>

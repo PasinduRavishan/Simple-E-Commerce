@@ -1,4 +1,5 @@
 'use client';
+import Image from "next/image";
 import { Card, Button } from "antd";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import { useCartStore } from "@/store/cartStore";
@@ -27,10 +28,12 @@ export default function ProductCard({ product }: ProductCardProps) {
             className="h-full flex flex-col"
             cover={
                 <div className="relative h-48 w-full overflow-hidden">
-                    <img 
-                        src={product.image} 
+                    <Image
+                        src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
+                        unoptimized
                     />
                 </div>
             }
